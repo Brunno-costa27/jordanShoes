@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+  }
+  
+body {
+    background: #f9f9f9;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    background-image: url('https://desafio02-jordanshoes.vercel.app/assets/wallpaper.e7868512.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-header {
+    width: 100%;
+    background: #181818;
+    text-align: center;
+    padding: 1.8rem;
+}
+
+.container-header span {
+    color: #f9f9f9;
+    font-size: 1.7rem;
+}
+
+.container-title{
+    width: 100%;
+    background: #f9f9f9;
+    text-align: center;
+    padding: 1.8rem;
+}
+
+.container-title h1 {
+    color: #181818;
+    font-size: 2.4rem;
+}
+
+.container-main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-main h2 {
+    color: #f9f9f9;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    font-weight: 700;
+}
+
+.container-main span {
+    color: #f9f9f9;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 180%;
+    margin-top: 12px;
+}
+
+.container-destaques {
+    padding: 5.8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container-destaques-header {
+    width: 100%;
+    margin-bottom:  5.8rem;
+    text-align: center;
+}
+
+.container-destaques-header h2 {
+    font-weight: 600;
+    color: #181818;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.container-destaques-header p {
+    color: #474747;
+    font-size: 16px;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+/* Quando a largura da tela for maior que 1280px, 4 colunas */
+@media (min-width: 1280px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+/* Quando a largura da tela for maior que 1024px, 3 colunas */
+@media (max-width: 1280px){
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Quando a largura da tela for maior que 768px, 2 colunas */
+@media (max-width: 1024px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Quando a largura da tela for menor ou igual a 768px, 1 coluna */
+@media (max-width: 768px){
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.grid {
+    display: grid;
+    gap: 3rem;
+    
+}
+
+.card {
+    background: #ebe9ea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    padding: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0; /* Começa com opacidade 0 */
+      transform: translateY(200px); /* Inicia 20px abaixo da posição normal */
+    }
+    to {
+      opacity: 1; /* Termina com opacidade 1 */
+      transform: translateY(0); /* Retorna à posição normal */
+    }
+  }
+
+
+.card img {
+    width: 250px;
+    height: 150px;
+    transition: all .4s ease-in-out;
+}
+
+.card span {
+    opacity: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 600;
+    transition: opacity 0.3s ease-in-out; 
+    animation: fadeIn 1s; 
+    color: #474747;
+    line-height: 2.5rem;
+}
+
+.card:hover>img{
+    transform: scale(1.3);
+}
+
+.card:hover>span{
+    opacity: 1;
+}
+
+.container-footer {
+    width: 100%;
+    background: #181818;
+    text-align: center;
+    padding: 1.8rem;
+}
+
+.container-footer span {
+    color: #f9f9f9;
+    font-size:1.7rem;
+}
+
+  
