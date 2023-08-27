@@ -162,7 +162,7 @@ html {
 .card img {
     width: 250px;
     height: 150px;
-    transition: all .4s ease-in-out;
+    transition: fade-in .4s ease-in-out forwards;
 }
 
 .card span {
@@ -171,10 +171,11 @@ html {
     text-align: center;
     margin-top: 2rem;
     font-weight: 600;
-    transition: opacity 0.3s ease-in-out; 
+    transition: opacity 0.3s ease-in-out forwards;  
     animation: fadeIn 1s; 
     color: #474747;
     line-height: 2.5rem;
+    transition: fade-in .4s ease-in-out forwards;
 }
 
 .card:hover>img{

@@ -48,15 +48,16 @@ Finalmente, esta linha adiciona um ouvinte de evento que chama a função escrev
 document.addEventListener("DOMContentLoaded", function () {
     const gridItems = document.querySelectorAll(".card");
     const windowHeight = window.innerHeight;
-    
-    
+
     function fadeInElements() {
         gridItems.forEach((item) => {
         const itemTop = item.getBoundingClientRect().top;
-            
         if (itemTop > windowHeight) {
-            item.style.transition = ".2s"
-            item.classList.add("card");
+            item.style.overflow = 'hidden';
+            item.classList.remove("card");
+        }else if(itemTop < windowHeight){
+          item.style.overflow = 'hidden';
+          item.classList.add("card");
         }
       });
     }
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
   /*
-    document.addEventListener("DOMContentLoaded", function () { - Isso espera até que o DOM (Document Object Model) da página seja completamente carregado antes de executar o código. Isso é importante para garantir que os elementos HTML estejam prontos para serem manipulados.
+document.addEventListener("DOMContentLoaded", function () { - Isso espera até que o DOM (Document Object Model) da página seja completamente carregado antes de executar o código. Isso é importante para garantir que os elementos HTML estejam prontos para serem manipulados.
 
 const gridItems = document.querySelectorAll(".card"); - Ele seleciona todos os elementos HTML com a classe CSS "card" e os armazena em uma variável chamada gridItems. Esses são os elementos aos quais o efeito "fadeIn" será aplicado.
 
